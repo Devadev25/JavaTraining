@@ -1,4 +1,5 @@
 package com.basic.stream.characterstream.file;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -9,10 +10,10 @@ public class Book {
         FileWriter write = null;
         try {
             System.out.println("Enter the file name");
-            String fileName=Utility.userInput.nextLine();
-            File file = new File(Utility.filePath);
+            String fileName = Utility.userInput.nextLine();
+            File file = new File(Utility.filePath + fileName + Utility.extension);
             file.createNewFile();
-            write = new FileWriter(file+fileName+Utility.extension, true);
+            write = new FileWriter(file, true);
 
             System.out.println("Enter text to write to the file (enter 'exit' to finish):");
             String input;

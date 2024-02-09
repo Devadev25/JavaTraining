@@ -12,7 +12,7 @@ public class WhatsApp {
                 System.out.println("2. Login details");
                 System.out.println("3.exit");
                 System.out.println("Enter your choice: ");
-                int choice =Utility.userInput.nextInt();
+                int choice = Utility.userInput.nextInt();
                 switch (choice) {
                     case 1:
                         Login.entry();

@@ -7,9 +7,10 @@ import java.util.Scanner;
 public class Content {
 
     public static void displayContent() {
+        Utility.userInput.nextLine();
         System.out.println("Search file name");
-        String searchFile=Utility.userInput.nextLine();
-        try (FileReader contentReader = new FileReader(Utility.filePath+searchFile+Utility.extension)) {
+        String searchFile = Utility.userInput.nextLine();
+        try (FileReader contentReader = new FileReader(Utility.filePath + searchFile + Utility.extension)) {
             int count = 0;
             int size = 0;
             while ((count = contentReader.read()) != -1) {
