@@ -11,7 +11,7 @@ public class BookManager {
                 System.out.println("Welcome to Book Manager!");
                 System.out.println("1. Write to the file");
                 System.out.println("2. Display content of the file");
-                System.out.println("3.exit");
+                System.out.println("3. Save and exit");
                 System.out.println("Enter your choice: ");
                 int choice = userInput.nextInt();
                 switch (choice) {
@@ -22,7 +22,7 @@ public class BookManager {
                         Content.displayContent();
                         break;
                     case 3:
-                        System.out.println("exited successfully");
+                        System.out.println("Saved successfully");
                         entry = false;
                         break;
                     default:

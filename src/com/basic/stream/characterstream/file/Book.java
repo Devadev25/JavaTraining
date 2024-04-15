@@ -12,19 +12,18 @@ public class Book {
             System.out.println("Enter the file name");
             String fileName = Utility.userInput.nextLine();
             File file = new File(Utility.filePath + fileName + Utility.extension);
-            file.createNewFile();
             write = new FileWriter(file, true);
 
             System.out.println("Enter text to write to the file (enter 'exit' to finish):");
             String input;
             while (!(input = Utility.userInput.nextLine()).equalsIgnoreCase("exit")) {
                 write.write(input);
-                write.write("\n");
             }
             write.flush();
             System.out.println("Encoding used for writing:" + write.getEncoding());
             System.out.println("Success..");
-        } catch (IOException exception) {
+
+        } catch (Exception exception) {
             System.out.println(exception.getMessage());
         } finally {
             try {
